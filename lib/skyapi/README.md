@@ -191,6 +191,6 @@ Class | Method | HTTP request | Description
 
 ## Author
 
-skycoin.doe@example.com
+contact@skycoin.net
 
 
