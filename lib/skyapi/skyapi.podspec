@@ -9,7 +9,7 @@
 
 Pod::Spec.new do |s|
     s.name             = "skyapi"
-    s.version          = "v0.25.1"
+    s.version          = "0.25.1"
 
     s.summary          = "Skycoin REST API."
     s.description      = <<-DESC
@@ -19,16 +19,16 @@ Pod::Spec.new do |s|
     s.platform     = :ios, '7.0'
     s.requires_arc = true
 
-    s.framework    = 'SystemConfiguration'
+    s.frameworks = 'SystemConfiguration', 'CoreData'
 
     s.homepage     = "https://github.com/openapitools/openapi-generator"
     s.license      = "Proprietary"
     s.source       = { :git => "https://github.com/openapitools/openapi-generator.git", :tag => "#{s.version}" }
-    s.author       = { "OpenAPI" => "team@openapitools.org" }
+    s.author       = { "Skycoin" => "contact@skycoin.net" }
 
     s.source_files = 'skyapi/**/*.{m,h}'
     s.public_header_files = 'skyapi/**/*.h'
-
+    s.resources      = 'skyapi/**/*.{xcdatamodeld,xcdatamodel}'
 
     s.dependency 'AFNetworking', '~> 3'
     s.dependency 'JSONModel', '~> 1.2'

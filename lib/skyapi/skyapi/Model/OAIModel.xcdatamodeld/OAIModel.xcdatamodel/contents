@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<model userDefinedModelVersionIdentifier="" type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="9525" systemVersion="15D21" minimumToolsVersion="Xcode 7.0">
+
+    <entity name="OAIApiv1exploreraddressInputsManagedObject" representedClassName="OAIApiv1exploreraddressInputsManagedObject" syncable="YES">
+        <attribute name="owner" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="hours" optional="YES" attributeType="Double" syncable="YES"/>
+        <attribute name="calculatedHours" optional="YES" attributeType="Double" syncable="YES"/>
+        <attribute name="coins" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="uxid" optional="YES" attributeType="String" syncable="YES"/>
+    </entity>
+    <entity name="OAIApiv1exploreraddressOutputsManagedObject" representedClassName="OAIApiv1exploreraddressOutputsManagedObject" syncable="YES">
+        <attribute name="hours" optional="YES" attributeType="Double" syncable="YES"/>
+        <attribute name="dst" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="coins" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="uxid" optional="YES" attributeType="String" syncable="YES"/>
+    </entity>
+    <entity name="OAIApiv1exploreraddressStatusManagedObject" representedClassName="OAIApiv1exploreraddressStatusManagedObject" syncable="YES">
+        <attribute name="unconfirmed" optional="YES" attributeType="Boolean" syncable="YES"/>
+        <attribute name="blockSeq" optional="YES" attributeType="Double" syncable="YES"/>
+        <attribute name="label" optional="YES" attributeType="Double" syncable="YES"/>
+        <attribute name="confirmed" optional="YES" attributeType="Boolean" syncable="YES"/>
+    </entity>
+    <entity name="OAIApiv1pendingTxsTransactionManagedObject" representedClassName="OAIApiv1pendingTxsTransactionManagedObject" syncable="YES">
+        <relationship name="outputs" optional="YES" toMany="YES" ordered="YES" deletionRule="Cascade" destinationEntity="OAIApiv1exploreraddressOutputsManagedObject" syncable="YES"/>
+        <attribute name="innerHash" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="inputs" optional="YES" attributeType="Transformable" syncable="YES"/>
+        <attribute name="sigs" optional="YES" attributeType="Transformable" syncable="YES"/>
+        <attribute name="length" optional="YES" attributeType="Integer 16" syncable="YES"/>
+        <attribute name="txid" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="type" optional="YES" attributeType="Integer 16" syncable="YES"/>
+        <attribute name="timestamp" optional="YES" attributeType="Integer 16" syncable="YES"/>
+    </entity>
+    <entity name="OAIApiv1walletsEntriesManagedObject" representedClassName="OAIApiv1walletsEntriesManagedObject" syncable="YES">
+        <attribute name="publicKey" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="address" optional="YES" attributeType="String" syncable="YES"/>
+    </entity>
+    <entity name="OAIApiv1walletsMetaManagedObject" representedClassName="OAIApiv1walletsMetaManagedObject" syncable="YES">
+        <attribute name="filename" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="encrypted" optional="YES" attributeType="Boolean" syncable="YES"/>
+        <attribute name="cryptoType" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="label" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="type" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="version" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="coin" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="timestamp" optional="YES" attributeType="Integer 16" syncable="YES"/>
+    </entity>
+    <entity name="OAIApiv1wallettransactionHoursSelectionManagedObject" representedClassName="OAIApiv1wallettransactionHoursSelectionManagedObject" syncable="YES">
+        <attribute name="mode" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="shareFactor" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="type" optional="YES" attributeType="String" syncable="YES"/>
+    </entity>
+    <entity name="OAIApiv1wallettransactionToManagedObject" representedClassName="OAIApiv1wallettransactionToManagedObject" syncable="YES">
+        <attribute name="hours" optional="YES" attributeType="Double" syncable="YES"/>
+        <attribute name="address" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="coins" optional="YES" attributeType="Double" syncable="YES"/>
+    </entity>
+    <entity name="OAIApiv1wallettransactionWalletManagedObject" representedClassName="OAIApiv1wallettransactionWalletManagedObject" syncable="YES">
+        <attribute name="unspents" optional="YES" attributeType="Transformable" syncable="YES"/>
+        <attribute name="addresses" optional="YES" attributeType="Transformable" syncable="YES"/>
+        <attribute name="password" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="_id" optional="YES" attributeType="String" syncable="YES"/>
+    </entity>
+    <entity name="OAIInlineObjectManagedObject" representedClassName="OAIInlineObjectManagedObject" syncable="YES">
+        <attribute name="changeAddress" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="hoursSelection" optional="YES" maxCount="1" deletionRule="Cascade" destinationEntity="OAIApiv1wallettransactionHoursSelectionManagedObject" syncable="YES"/>
+        <attribute name="ignoreUnconfirmed" optional="YES" attributeType="Boolean" syncable="YES"/>
+        <relationship name="to" optional="YES" toMany="YES" ordered="YES" deletionRule="Cascade" destinationEntity="OAIApiv1wallettransactionToManagedObject" syncable="YES"/>
+        <relationship name="wallet" optional="YES" maxCount="1" deletionRule="Cascade" destinationEntity="OAIApiv1wallettransactionWalletManagedObject" syncable="YES"/>
+    </entity>
+    <entity name="OAIInlineResponse200ManagedObject" representedClassName="OAIInlineResponse200ManagedObject" syncable="YES">
+        <attribute name="hours" optional="YES" attributeType="Double" syncable="YES"/>
+        <attribute name="coins" optional="YES" attributeType="Integer 16" syncable="YES"/>
+        <attribute name="uxid" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="ownerAddress" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="spentBlockSeq" optional="YES" attributeType="Integer 16" syncable="YES"/>
+        <attribute name="spentTx" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="time" optional="YES" attributeType="Double" syncable="YES"/>
+        <attribute name="srcBlockSeq" optional="YES" attributeType="Double" syncable="YES"/>
+        <attribute name="srcTx" optional="YES" attributeType="String" syncable="YES"/>
+    </entity>
+    <entity name="OAIInlineResponse2001ManagedObject" representedClassName="OAIInlineResponse2001ManagedObject" syncable="YES">
+        <attribute name="csrfToken" optional="YES" attributeType="String" syncable="YES"/>
+    </entity>
+    <entity name="OAIInlineResponse2002ManagedObject" representedClassName="OAIInlineResponse2002ManagedObject" syncable="YES">
+        <relationship name="outputs" optional="YES" toMany="YES" ordered="YES" deletionRule="Cascade" destinationEntity="OAIApiv1exploreraddressOutputsManagedObject" syncable="YES"/>
+        <attribute name="innerHash" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="inputs" optional="YES" toMany="YES" ordered="YES" deletionRule="Cascade" destinationEntity="OAIApiv1exploreraddressInputsManagedObject" syncable="YES"/>
+        <attribute name="fee" optional="YES" attributeType="Integer 16" syncable="YES"/>
+        <attribute name="sigs" optional="YES" attributeType="Transformable" syncable="YES"/>
+        <attribute name="length" optional="YES" attributeType="Double" syncable="YES"/>
+        <attribute name="txid" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="type" optional="YES" attributeType="Integer 16" syncable="YES"/>
+        <relationship name="status" optional="YES" maxCount="1" deletionRule="Cascade" destinationEntity="OAIApiv1exploreraddressStatusManagedObject" syncable="YES"/>
+        <attribute name="timestamp" optional="YES" attributeType="Integer 16" syncable="YES"/>
+    </entity>
+    <entity name="OAIInlineResponse2003ManagedObject" representedClassName="OAIInlineResponse2003ManagedObject" syncable="YES">
+        <attribute name="lastReceived" optional="YES" attributeType="Double" syncable="YES"/>
+        <attribute name="lastSent" optional="YES" attributeType="Double" syncable="YES"/>
+        <attribute name="outgoing" optional="YES" attributeType="Boolean" syncable="YES"/>
+        <attribute name="mirror" optional="YES" attributeType="Integer 16" syncable="YES"/>
+        <attribute name="address" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="listenPort" optional="YES" attributeType="Integer 16" syncable="YES"/>
+        <attribute name="isTrustedPeer" optional="YES" attributeType="Boolean" syncable="YES"/>
+        <attribute name="connectedAt" optional="YES" attributeType="Double" syncable="YES"/>
+        <relationship name="unconfirmedVerifyTransaction" optional="YES" maxCount="1" deletionRule="Cascade" destinationEntity="OAIInlineResponse2003UnconfirmedVerifyTransactionManagedObject" syncable="YES"/>
+        <attribute name="_id" optional="YES" attributeType="Double" syncable="YES"/>
+        <attribute name="state" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="userAgent" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="height" optional="YES" attributeType="Double" syncable="YES"/>
+    </entity>
+    <entity name="OAIInlineResponse2003UnconfirmedVerifyTransactionManagedObject" representedClassName="OAIInlineResponse2003UnconfirmedVerifyTransactionManagedObject" syncable="YES">
+        <attribute name="burnFactor" optional="YES" attributeType="Integer 16" syncable="YES"/>
+        <attribute name="maxTransactionSize" optional="YES" attributeType="Integer 16" syncable="YES"/>
+        <attribute name="maxDecimals" optional="YES" attributeType="Integer 16" syncable="YES"/>
+    </entity>
+    <entity name="OAIInlineResponse2004ManagedObject" representedClassName="OAIInlineResponse2004ManagedObject" syncable="YES">
+        <attribute name="announced" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="isValid" optional="YES" attributeType="Boolean" syncable="YES"/>
+        <attribute name="checked" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="received" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="transaction" optional="YES" maxCount="1" deletionRule="Cascade" destinationEntity="OAIApiv1pendingTxsTransactionManagedObject" syncable="YES"/>
+    </entity>
+    <entity name="OAIInlineResponse2005ManagedObject" representedClassName="OAIInlineResponse2005ManagedObject" syncable="YES">
+        <relationship name="entries" optional="YES" toMany="YES" ordered="YES" deletionRule="Cascade" destinationEntity="OAIApiv1walletsEntriesManagedObject" syncable="YES"/>
+        <relationship name="meta" optional="YES" maxCount="1" deletionRule="Cascade" destinationEntity="OAIApiv1walletsMetaManagedObject" syncable="YES"/>
+    </entity>
+    <entity name="OAIInlineResponse2006ManagedObject" representedClassName="OAIInlineResponse2006ManagedObject" syncable="YES">
+        <attribute name="address" optional="YES" attributeType="String" syncable="YES"/>
+    </entity>
+    <entity name="OAIInlineResponse2007ManagedObject" representedClassName="OAIInlineResponse2007ManagedObject" syncable="YES">
+        <relationship name="data" optional="YES" maxCount="1" deletionRule="Cascade" destinationEntity="OAIInlineResponse2007DataManagedObject" syncable="YES"/>
+        <attribute name="error" optional="YES" attributeType="" syncable="YES"/>
+    </entity>
+    <entity name="OAIInlineResponse2007DataManagedObject" representedClassName="OAIInlineResponse2007DataManagedObject" syncable="YES">
+        <attribute name="version" optional="YES" attributeType="Double" syncable="YES"/>
+    </entity>
+    <entity name="OAIInlineResponseDefaultManagedObject" representedClassName="OAIInlineResponseDefaultManagedObject" syncable="YES">
+        <attribute name="code" optional="YES" attributeType="Integer 16" syncable="YES"/>
+        <attribute name="message" optional="YES" attributeType="String" syncable="YES"/>
+    </entity>
+    
+</model>
