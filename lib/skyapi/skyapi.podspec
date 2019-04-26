@@ -28,7 +28,6 @@ Pod::Spec.new do |s|
 
     s.source_files = 'skyapi/**/*.{m,h}'
     s.public_header_files = 'skyapi/**/*.h'
-    s.resources      = 'skyapi/**/*.{xcdatamodeld,xcdatamodel}'
 
     s.dependency 'AFNetworking', '~> 3'
     s.dependency 'JSONModel', '~> 1.2'
