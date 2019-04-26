@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		DD80FFE022729B6F0048C35E /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = DD80FFDF22729B6F0048C35E /* main.m */; };
+		DD9E6BB22272A38F00033937 /* Quick.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DD9E6BB12272A38F00033937 /* Quick.framework */; };
+		DD9E6BB42272A3AF00033937 /* Nimble.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DD9E6BB32272A3AF00033937 /* Nimble.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -25,6 +27,8 @@
 /* Begin PBXFileReference section */
 		DD80FFDC22729B6F0048C35E /* test-skyapi */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = "test-skyapi"; sourceTree = BUILT_PRODUCTS_DIR; };
 		DD80FFDF22729B6F0048C35E /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		DD9E6BB12272A38F00033937 /* Quick.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Quick.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		DD9E6BB32272A3AF00033937 /* Nimble.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Nimble.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -32,6 +36,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DD9E6BB42272A3AF00033937 /* Nimble.framework in Frameworks */,
+				DD9E6BB22272A38F00033937 /* Quick.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -43,6 +49,7 @@
 			children = (
 				DD80FFDE22729B6F0048C35E /* test-skyapi */,
 				DD80FFDD22729B6F0048C35E /* Products */,
+				DD9E6BB02272A38F00033937 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -60,6 +67,15 @@
 				DD80FFDF22729B6F0048C35E /* main.m */,
 			);
 			path = "test-skyapi";
+			sourceTree = "<group>";
+		};
+		DD9E6BB02272A38F00033937 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				DD9E6BB32272A3AF00033937 /* Nimble.framework */,
+				DD9E6BB12272A38F00033937 /* Quick.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */

@@ -22,8 +22,10 @@ tests/mytest.py
 .tox
 .cache
 
+# Temporary files
 *.swp
 *.swo
+.DS_Store
 
 # Objective-C
 
