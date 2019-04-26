@@ -1,0 +1,4 @@
+language: objective-c
+
+script:
+        - (cd lib/skyapi && pod lib lint skyapi.podspec --verbose --allow-warnings)
