@@ -21,9 +21,8 @@ Pod::Spec.new do |s|
 
     s.frameworks = 'SystemConfiguration', 'CoreData'
 
-    s.homepage     = "https://github.com/openapitools/openapi-generator"
-    s.license      = "Proprietary"
-    s.source       = { :git => "https://github.com/openapitools/openapi-generator.git", :tag => "#{s.version}" }
+    s.homepage     = "https://skycoin.net"
+    s.license      = "Propietary"
     s.author       = { "Skycoin" => "contact@skycoin.net" }
 
     s.source_files = 'skyapi/**/*.{m,h}'
