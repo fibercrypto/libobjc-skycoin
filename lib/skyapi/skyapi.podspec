@@ -23,7 +23,7 @@ Pod::Spec.new do |s|
 
     s.homepage     = "https://skycoin.net"
     s.license      = "Propietary"
-    s.source       = { :git => "https://github.com/simelo/libobjc-skycoin"}
+    s.source       = { :git => "https://github.com/simelo/libobjc-skycoin.git"}
     s.author       = { "Skycoin" => "contact@skycoin.net" }
 
     s.source_files = 'skyapi/**/*.{m,h}'
